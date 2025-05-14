@@ -57,6 +57,7 @@ In this exercise you will:
 ```bash
 # 1) The exact ssh command you ran
 # 2) A detailed, step-by-step explanation of what happened at each stage
+
 ```
 
 ---
@@ -85,9 +86,16 @@ In this exercise you will:
 
 ```bash
 # 1) The ssh-keygen command you ran
+ssh-keygen -t ed25519 -C "georg.kulodzik@stud.thga.de"
+
 # 2) The file paths of the generated keys
+/home/georg/.ssh/id_ed25519
+/home/georg/.ssh/id_ed25519.pub
 # 3) Your written explanation (3–5 sentences) of the signature process
-```
+Generating public/private ed25519 key pair will be made.
+Asking where file in which to save the key (/home/georg/.ssh/id_ed25519):
+Asking for enter passphrase (empty for no passphrase), but dont need.
+Information about save location, The key fingerprint is shown and a randomart image.
 
 ---
 
@@ -126,6 +134,11 @@ In this exercise you will:
 
 ```text
 # 1) The full contents of your ~/.ssh/config
+
+Host github.com
+        HostName github.com
+        IdentityFile ~/.ssh/georgssh
+
 # 2) A short explanation (3–4 sentences) of how the config simplifies connections
 ```
 
